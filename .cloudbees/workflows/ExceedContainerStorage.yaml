@@ -16,5 +16,5 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-          dd if=/dev/zero of=/tmp/bigfile bs=1M count=5010
+          dd if=/dev/zero of=/tmp/bigfile bs=1M count=13000
           sleep 100

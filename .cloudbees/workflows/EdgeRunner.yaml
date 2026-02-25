@@ -18,5 +18,5 @@ jobs:
     with:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
-      labels: "os:darwin"
+      labels: "hari"
     delegates: https://github.com/EgdeRunnerTest/EdgeRunnerTest/custom-job.yml

@@ -14,9 +14,21 @@ jobs:
       shell: sh
       run: |
         echo "Hello, world! I'm $(whoami) on $(hostname)"
-  edge:
+  edge1:
     with:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
       labels: "hari"
     delegates: https://github.com/EgdeRunnerTest/EdgeRunnerTest/custom-job.yml
+  edge2:
+    with:
+      script: |
+        echo "Hello world! I'm $(whoami) on $(hostname)"
+      labels: "hari"
+    delegates: https://github.com/EgdeRunnerTest/EdgeRunnerTest/custom-job.yml
+  edge3:
+    with:
+      script: |
+        echo "Hello world! I'm $(whoami) on $(hostname)"
+      labels: "hari"
+    delegates: https://github.com/EgdeRunnerTest/EdgeRunnerTest/custom-job.yml        

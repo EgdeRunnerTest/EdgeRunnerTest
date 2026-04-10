@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: [hari]
+    runs-on: [os:darwin]
     steps:
       - name: Say hello
         shell: sh

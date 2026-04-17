@@ -79,21 +79,4 @@ jobs:
           echo "Status check: $STATUS_CHECK"
           echo "Deployment complete!"
 
-  notify:
-    needs: deploy
-    if: ${{ 'production' == 'staging' }}
-    runs-on:
-      - hari
-      - os:darwin
-    steps:
-      - name: Send notification
-        id: notify-step
-        shell: sh
-        env:
-          NOTIFICATION_SERVICE: "slack"
-          ENV: "staging"
-          VERSION: "1.0.0"
-          SLACK_WEBHOOK: 'dummy'
-        run: |
-          echo "Sending notification via $NOTIFICATION_SERVICE"
-          echo "Deployment of version $VERSION to $ENV completed"
+ 

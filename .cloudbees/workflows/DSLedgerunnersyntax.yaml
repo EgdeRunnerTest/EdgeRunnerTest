@@ -30,7 +30,7 @@ jobs:
           COMPILER: "gcc"
           FLAGS: "-O2"
           BUILD_ENV: "darwin-build"
-          CI: ${{ vars.BUILD_CI }}
+          CI: "CI"
         run: |
           echo "Building with $COMPILER"
           echo "Flags: $FLAGS"

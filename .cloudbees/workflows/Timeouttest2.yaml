@@ -1,0 +1,24 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: My workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [hari]
+    steps:
+      - name: Say hello
+        timeout-minutes: 1  # Step will timeout after 1 minute
+        shell: sh
+        run: |
+          echo "hello world HARI"
+          echo "Starting sleep for 3 minutes..."
+          sleep 180  # Sleep for 3 minutes (180 seconds)
+          echo "Sleep completed (you shouldn't see this)"
+      
+      - name: This step should not run
+        shell: sh
+        run: |
+          echo "This should not execute if previous step timed out"

@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: [linuxEc2]
+    runs-on: [linuxEc2ttws]
     steps:
       - name: Say hello
         shell: sh

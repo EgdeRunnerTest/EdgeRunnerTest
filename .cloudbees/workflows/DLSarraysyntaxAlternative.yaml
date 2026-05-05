@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on:
-      - hariyuy
+      - hari
     steps:
       - name: Say hello
         shell: sh

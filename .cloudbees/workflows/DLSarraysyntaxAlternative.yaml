@@ -14,3 +14,16 @@ jobs:
         shell: sh
         run: |
           echo "hello world HARI"
+             steps:
+      - name: Say hello
+        shell: sh
+        run: |
+          echo "hello world HARI1"  
+      - name: Say hello
+        shell: sh
+        run: |
+          echo "hello world HARI2"  
+      - name: Say hello
+        shell: sh
+        run: |
+          echo "hello world HARI3"

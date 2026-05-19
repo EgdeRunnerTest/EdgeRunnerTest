@@ -12,4 +12,5 @@ jobs:
       - name: Say hello
         shell: sh
         run: |
+          sleep 9000
           echo "hello world HARI"

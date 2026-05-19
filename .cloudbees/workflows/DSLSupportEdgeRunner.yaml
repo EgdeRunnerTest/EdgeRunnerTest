@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: hari
+    runs-on: LinuxEc2
     steps:
       - name: Say hello
         shell: sh

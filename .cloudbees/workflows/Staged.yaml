@@ -7,11 +7,13 @@ metadata:
   stages/v1alpha1:
     - name: Stage 1
       jobs:
-        - job1
+        - job2
 jobs:
-  job1:
+  job2:
     runs-on: LinuxEc2
     steps:
-      - uses: docker://golang:1.20.3-alpine3.17
-        name: Hello world
+      - name: Hello world
+        uses: docker://golang:1.20.3-alpine3.17
+        run: echo "job1"
         kind: build
+        shell: sh

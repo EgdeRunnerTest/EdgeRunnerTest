@@ -15,7 +15,6 @@ jobs:
     env:
       JOB_ENV: "build-job"
     outputs:
-      artifact_path: ${{ steps.package.outputs.artifact_path }}
       build_status: ${{ steps.compile.outputs.status }}
     steps:
       - name: Print context

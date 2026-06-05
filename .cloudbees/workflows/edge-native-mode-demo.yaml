@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: |
           echo "Compiling..."
-          echo "status=success" >> $CLOUDBEES_OUTPUTS
+      
 
       - name: Run tests
         id: tests

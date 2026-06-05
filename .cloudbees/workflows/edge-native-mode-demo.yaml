@@ -32,7 +32,6 @@ jobs:
 
       - name: Compile
         id: compile
-        working-directory: src
         shell: bash
         run: |
           echo "Compiling..."

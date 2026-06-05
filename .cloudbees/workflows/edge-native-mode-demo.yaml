@@ -53,15 +53,7 @@ jobs:
         run: |
           echo "This only runs on production dispatches"
 
-      - name: Package artifact
-        id: package
-        if: ${{ steps.compile.outputs.status == 'success' }}
-        shell: bash
-        env:
-          SECRET_TOKEN: ${{ secrets.BUILD_TOKEN }}
-        run: |
-          echo "Packaging with token: ***"
-          echo "dist/app-1.tar.gz" >> "$CLOUDBEES_OUTPUTS/artifact_path"
+  
 
   deploy:
     runs-on: [LinuxEc2]

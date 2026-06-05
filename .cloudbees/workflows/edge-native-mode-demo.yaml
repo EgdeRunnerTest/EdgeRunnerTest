@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: |
           echo "Compiling..."
-           echo "status=success" >> $CLOUDBEES_OUTPUTS
+           echo "success" >> $CLOUDBEES_OUTPUTS/status
       
 
       - name: Run tests
@@ -61,8 +61,7 @@ jobs:
           SECRET_TOKEN: ${{ secrets.BUILD_TOKEN }}
         run: |
           echo "Packaging with token: ***"
-          ARTIFACT="dist/app-$APP_VERSION.tar.gz"
-          echo "artifact_path=$ARTIFACT" >> $CLOUDBEES_OUTPUTS
+          echo "dist/app-1.tar.gz" >> $CLOUDBEES_OUTPUTS/artifact_path
 
   deploy:
     runs-on: [LinuxEc2]

@@ -60,16 +60,6 @@ jobs:
     needs: build
     if: ${{ needs.build.outputs.build_status == 'success' }}
     steps:
-      - name: Deploy artifact
-        id: deploy
-        shell: bash
-        env:
-          ARTIFACT: ${{ needs.build.outputs.artifact_path }}
-          DEPLOY_SECRET: ${{ secrets.DEPLOY_KEY }}
-        run: |
-          echo "Deploying $ARTIFACT"
-          echo "Deploy key length: ${#DEPLOY_SECRET}"
-
       - name: Notify
         id: notify
         shell: sh

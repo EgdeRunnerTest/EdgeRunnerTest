@@ -12,7 +12,8 @@ jobs:
   deploy:
     runs-on: ${{ inputs.environment == 'production' && vars.PROD_RUNNER || vars.DEV_RUNNER }}
     steps:
-      - name: Print environment
-        uses: docker://alpine
-        run: echo "Deploying to ${{ inputs.environment }}"
+       - name: Say hello
+         shell: sh
+         run: |
+          echo "hello world"
 

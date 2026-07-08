@@ -1,0 +1,18 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: uc1-env-based-runner
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: string
+        default: staging
+
+jobs:
+  deploy:
+    runs-on: ${{ inputs.environment == 'production' && vars.PROD_RUNNER || vars.DEV_RUNNER }}
+    steps:
+      - name: Print environment
+        uses: docker://alpine
+        run: echo "Deploying to ${{ inputs.environment }}"
+

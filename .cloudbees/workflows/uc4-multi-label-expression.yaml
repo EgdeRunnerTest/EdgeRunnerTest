@@ -1,0 +1,15 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: uc4-multi-label-expression
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ vars.RUNNER_LABELS }}
+    steps:
+      - name: Say hello
+        shell: sh
+        run: |
+          echo "hello world"
+
